@@ -2,8 +2,6 @@
 using AutoMapper;
 using Queries.Core.Domain;
 using ShopController.Resources;
-using Queries.Persistence.Repositories;
-using Queries.Core.IRepositories;
 using Queries.Core;
 
 namespace ShopController.Controllers;
@@ -38,7 +36,7 @@ public class ItemController : ControllerBase
         int result = await _unitOfWork.CompleteAsync();
 
         return result > 0 
-            ? Ok()
-            : BadRequest();
+            ? Ok(item)
+            : BadRequest("Noget gik galt.");
     }
 }

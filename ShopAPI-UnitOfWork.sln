@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopController", "ShopController\ShopController.csproj", "{FD9A38AE-EC85-4DFA-942B-739F940BE0FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries", "Queries\Queries.csproj", "{156B815D-3AC3-4A18-874F-344AB0D37E38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD9A38AE-EC85-4DFA-942B-739F940BE0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9A38AE-EC85-4DFA-942B-739F940BE0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9A38AE-EC85-4DFA-942B-739F940BE0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9A38AE-EC85-4DFA-942B-739F940BE0FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156B815D-3AC3-4A18-874F-344AB0D37E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156B815D-3AC3-4A18-874F-344AB0D37E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156B815D-3AC3-4A18-874F-344AB0D37E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156B815D-3AC3-4A18-874F-344AB0D37E38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EE9687F-A95B-4183-AA4E-E2FC7471DE05}
+	EndGlobalSection
+EndGlobal

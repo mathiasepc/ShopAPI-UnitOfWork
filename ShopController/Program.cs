@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Queries.Core;
-using Queries.Core.Domain;
 using Queries.Core.IRepositories;
 using Queries.Persistence;
 using Queries.Persistence.Repositories;

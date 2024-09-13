@@ -6,4 +6,5 @@ namespace Queries.Core.IRepositories;
 public interface IItemRepo
 {
     Task InsertItem(Item item);
+    Task<IEnumerable<Item>> GetItems();
 }

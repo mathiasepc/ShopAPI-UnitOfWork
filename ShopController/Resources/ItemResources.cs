@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿
 namespace ShopController.Resources;
 
 public class ItemResources : BaseModelResources

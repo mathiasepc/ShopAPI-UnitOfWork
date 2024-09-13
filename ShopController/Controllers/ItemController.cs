@@ -20,6 +20,14 @@ public class ItemController : ControllerBase
         _unitOfWork = unitOfWork;
     }
 
+    [HttpGet]
+    public async Task<IEnumerable<ItemResources>> GetItems()
+    {
+        var items = await _unitOfWork.ItemRepo.GetItems();
+
+        return _mapper.Map<IEnumerable<Item>, IEnumerable<ItemResources>>(items);
+    }
+
     [HttpPost]
     public async Task<IActionResult> CreateItem([FromBody] ItemResources itemResource)
     {

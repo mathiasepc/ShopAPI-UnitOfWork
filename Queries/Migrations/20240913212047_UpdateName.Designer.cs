@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Queries.Persistence;
 
@@ -11,9 +12,11 @@ using Queries.Persistence;
 namespace Queries.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240913212047_UpdateName")]
+    partial class UpdateName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,23 +67,6 @@ namespace Queries.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Makes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("b7f26ac9-5b71-497f-b0a5-5c683e267181"),
-                            Name = "Tv"
-                        },
-                        new
-                        {
-                            Id = new Guid("b9c77744-3064-4d72-b349-ba12a23fecf7"),
-                            Name = "Tøj"
-                        },
-                        new
-                        {
-                            Id = new Guid("b4b83d92-d0ac-4bf9-8fae-8fe52284dd9a"),
-                            Name = "Legetøj"
-                        });
                 });
 
             modelBuilder.Entity("Queries.Core.Domain.Model", b =>
@@ -101,62 +87,6 @@ namespace Queries.Migrations
                     b.HasIndex("MakeId");
 
                     b.ToTable("Models");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("42532caa-0a7f-4556-bcb2-43113ddb7386"),
-                            MakeId = new Guid("b7f26ac9-5b71-497f-b0a5-5c683e267181"),
-                            Name = "Phillips"
-                        },
-                        new
-                        {
-                            Id = new Guid("acb956e0-7a1f-48c1-b100-7e9f35d9411b"),
-                            MakeId = new Guid("b7f26ac9-5b71-497f-b0a5-5c683e267181"),
-                            Name = "LG"
-                        },
-                        new
-                        {
-                            Id = new Guid("e0799875-c7cd-4c34-b119-9ce3d9f5f742"),
-                            MakeId = new Guid("b7f26ac9-5b71-497f-b0a5-5c683e267181"),
-                            Name = "Prosonic"
-                        },
-                        new
-                        {
-                            Id = new Guid("5f708c2e-5497-4b8f-a8e2-d393d7ef1540"),
-                            MakeId = new Guid("b9c77744-3064-4d72-b349-ba12a23fecf7"),
-                            Name = "Nike"
-                        },
-                        new
-                        {
-                            Id = new Guid("c956850a-e488-420f-8611-dd30849aaa8e"),
-                            MakeId = new Guid("b9c77744-3064-4d72-b349-ba12a23fecf7"),
-                            Name = "Peak"
-                        },
-                        new
-                        {
-                            Id = new Guid("91414760-4cef-4da4-8c91-00e2b18078b2"),
-                            MakeId = new Guid("b9c77744-3064-4d72-b349-ba12a23fecf7"),
-                            Name = "Puma"
-                        },
-                        new
-                        {
-                            Id = new Guid("e5c7929a-956d-4e29-9b86-22f472430933"),
-                            MakeId = new Guid("b4b83d92-d0ac-4bf9-8fae-8fe52284dd9a"),
-                            Name = "Brætspil"
-                        },
-                        new
-                        {
-                            Id = new Guid("c06435a9-1913-4a52-a415-01c93753c388"),
-                            MakeId = new Guid("b4b83d92-d0ac-4bf9-8fae-8fe52284dd9a"),
-                            Name = "Lego"
-                        },
-                        new
-                        {
-                            Id = new Guid("c2dc45ee-9bb0-42e9-b625-aeddc53da952"),
-                            MakeId = new Guid("b4b83d92-d0ac-4bf9-8fae-8fe52284dd9a"),
-                            Name = "Bamser"
-                        });
                 });
 
             modelBuilder.Entity("Queries.Core.Domain.Item", b =>

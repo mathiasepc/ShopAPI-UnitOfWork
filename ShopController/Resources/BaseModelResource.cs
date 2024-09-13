@@ -1,6 +1,6 @@
 ﻿namespace ShopController.Resources;
 
-public class BaseModelResources
+public class BaseModelResource
 {
     private Guid _id;
     public string Name { get; set; }
@@ -10,7 +10,7 @@ public class BaseModelResources
         set { _id = value; }
     }
 
-    public BaseModelResources() 
+    public BaseModelResource() 
     { 
         _id = Guid.NewGuid();
     }

@@ -12,9 +12,11 @@ public class UnitOfWork : IUnitOfWork
         _dbContext = dbContext;
 
         ItemRepo = new ItemRepo(dbContext);
+        MakeRepo = new MakeRepo(dbContext);
     }
 
     public IItemRepo ItemRepo { get; private set; }
+    public IMakeRepo MakeRepo { get; private set; }
 
     public async Task<int> CompleteAsync()
     {

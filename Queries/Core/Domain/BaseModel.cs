@@ -14,7 +14,7 @@ public class BaseModel
         get { return _id; }
         set { _id = value; }
     }
-    public string name { get; set; }
+    public string Name { get; set; }
 
     public BaseModel()
     {

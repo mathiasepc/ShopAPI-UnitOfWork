@@ -19,17 +19,17 @@ public class ItemController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<ItemResources>> GetItems()
+    public async Task<IEnumerable<ItemResource>> GetItems()
     {
         var items = await _unitOfWork.ItemRepo.GetItems();
 
-        return _mapper.Map<IEnumerable<Item>, IEnumerable<ItemResources>>(items);
+        return _mapper.Map<IEnumerable<Item>, IEnumerable<ItemResource>>(items);
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateItem([FromBody] ItemResources itemResource)
+    public async Task<IActionResult> CreateItem([FromBody] ItemResource itemResource)
     {
-        var item = _mapper.Map<ItemResources, Item>(itemResource);
+        var item = _mapper.Map<ItemResource, Item>(itemResource);
 
         await _unitOfWork.ItemRepo.InsertItem(item);
 

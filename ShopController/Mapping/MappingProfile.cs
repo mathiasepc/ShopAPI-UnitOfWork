@@ -8,10 +8,13 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        // Resources to domain
-        CreateMap<ItemResources, Item>();
-
         // domain to resources
-        CreateMap<Item, ItemResources>();
+        CreateMap<Item, ItemResource>();
+        CreateMap<Model, KeyValuePairResource>();
+        CreateMap<Make, MakeResource>();
+
+        // Resources to domain
+        CreateMap<ItemResource, Item>();
+
     }
 }

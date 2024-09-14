@@ -15,6 +15,5 @@ public class MappingProfile : Profile
 
         // Resources to domain
         CreateMap<ItemResource, Item>();
-
     }
 }
